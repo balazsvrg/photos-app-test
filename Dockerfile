@@ -6,4 +6,4 @@ COPY . /app/
 
 RUN pip install -r requirements.txt
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "helloworld.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "photos_app.wsgi:application"]
