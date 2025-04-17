@@ -39,5 +39,5 @@ jobs:
       - name: Deploy to OpenShift
         run: |
           oc project balazsvrg-dev
-          oc set image deployment/photos-app-test-git  photos-app-test-git=photos-app-test:latest
-          oc rollout latest deployment/photos-app-test-git
+          oc set image deployment/photos-app-test-git photos-app-test-git=photos-app-test:latest
+          oc rollout restart deployment/photos-app-test-git
