@@ -34,7 +34,6 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t photos-app-test:latest .
-          docker push photos-app-test:latest
 
       - name: Deploy to OpenShift
         run: |
