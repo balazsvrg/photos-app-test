@@ -33,10 +33,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t photos-app-test:latest .
+            docker build -t photos-app-test:latest .
+
 
       - name: Deploy to OpenShift
         run: |
           oc project balazsvrg-dev
-          oc set image deployment/ photos-app-test-git  photos-app-test-git=photos-app-test:latest
+          oc set image deployment/photos-app-test-git  photos-app-test-git=photos-app-test:latest
           oc rollout latest deployment/photos-app-test-git
